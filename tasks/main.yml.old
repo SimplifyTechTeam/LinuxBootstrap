@@ -14,12 +14,12 @@
 
 - name: Set permissions on /home/sitadmin/.ssh
   file:
-    path: /home/sitadmin/.ssh/authorized_keys
+    path: /home/sitadmin/.ssh
     owner: sitadmin
     group: sitadmin
     mode: 755
 
-- name: Copy ssh public key to authorized_keys
+- name: Copy ssh public key to authorized_keys with permissions
   copy:
     src: deploy.pub
     dest: /home/sitadmin/.ssh/authorized_keys

@@ -1,4 +1,4 @@
 ---
 # handlers file for harden
-- name: reset deploy password
+- name: set sitadmin password to never expire
   command: passwd -e sitadmin
