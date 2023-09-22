@@ -1,0 +1,19 @@
+- name: Ensure sitadmin user present
+  user:
+    name: sitadmin
+    shell: /bin/bash
+    password: e1bdc49ff5b914f3d6255d9af6208466c326db2f9489d21632c7e78ba727b452fb7f1a56f69b78d7ca3b73edb8d70b64e0722bd03ae3bf71e8e87f46e9a7d065
+
+- name: Add sitadmin to sudoers
+  lineinfile:
+    path: /etc/sudoers
+    state: present
+    regexp: "^%sitadmin"
+    line: "%sitadmin ALL=(ALL) ALL"
+    validate: "/usr/sbin/visudo -cf %s"
+
+- name: Set authorized keys taken from url
+  authorized_key:
+    user: charlie
+    state: present
+    key: https://github.com/charlie.keys
