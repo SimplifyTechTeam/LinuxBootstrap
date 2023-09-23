@@ -1,3 +1,4 @@
+netplan_conf_dir: "/etc/netplan/"
 network:
   ethernets:
     ens160:
