@@ -6,7 +6,7 @@
       options:
         - rotate 7
         - weekly
-        - size 10M
+        - maxsize 1K
         - missingok
-        - compress
+        - nocompress
         - create 0644 sitadmin-a sitadmin-a
