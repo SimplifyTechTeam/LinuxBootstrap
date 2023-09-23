@@ -3,4 +3,4 @@
         dest: "/etc/netplan/00-installer-config-test.yaml"
       vars:
         _addresses: "{{ netplan_conf.network.ethernets.ens160.nameservers.addresses|
-                        regex_replace('192.168.86.14', '192.168.86.16') }}"
+                        regex_replace('192.168.1.11', '192.168.86.16') }}"
