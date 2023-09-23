@@ -4,9 +4,9 @@
       log_dir: '/var/log/ansible/linuxbootstrap'
       log_extension: 'log'
       options:
-        - rotate 7
-        - weekly
-        - maxsize 1K
+        - rotate 14
+        - daily
+        - maxsize 10M
         - missingok
         - nocompress
         - create 0644 sitadmin-a sitadmin-a
