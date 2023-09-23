@@ -10,7 +10,6 @@
 
   tasks:
     - include_vars: users_var.yml
-    - include_vars: authorized_keys_var.yml
     - include: tasks/apt.yml
     - include: tasks/firewall.yml
     - include: tasks/sudoers.yml
