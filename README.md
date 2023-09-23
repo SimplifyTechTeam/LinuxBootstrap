@@ -7,7 +7,7 @@ this will automatically setup users and pull their ssh keys from the TeamSSHKeys
 add your username-a to the vars/user_var.yml and your account will be automatically added to all systems ready for ssh key based auth
 
 # Requirements
-run the below commands to setup a node, the below example is for Ubuntu
+run the below command to setup a node, the below example is for Ubuntu
 
 sudo apt update -y && \
 sudo apt install software-properties-common -y && \
