@@ -17,4 +17,5 @@
     - include: tasks/users.yml
     - include: tasks/authorized_keys.yml
     - include: tasks/cron.yml
+    - include: tasks/sshd.yml
   
