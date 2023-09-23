@@ -1,9 +1,3 @@
-#- name: Set authorized keys taken from url
-#  authorized_key:
-#    user: sitadmin-a
-#    state: present
-#    key: https://raw.githubusercontent.com/SimplifyTechTeam/TeamSSHKeys/main/sitadmin-a.pub
-
 - name: Set authorized keys taken from url
   authorized_key:
     user: "{{ item.login }}"
