@@ -1,13 +1,20 @@
-- name: Disable root login via password
+- name: Disable PermitRootLogin
   lineinfile:
     path: /etc/ssh/sshd_config
     state: present
     regexp: "^PermitRootLogin"
     line: "PermitRootLogin prohibit-password"
 
-#- name: Disable PasswordAuthentication
-#  lineinfile:
-#    path: /etc/ssh/sshd_config
-#    state: present
-#    regexp: "^PasswordAuthentication"
- #   line: "PasswordAuthentication no"
+- name: Disable PasswordAuthentication
+  lineinfile:
+    path: /etc/ssh/sshd_config
+    state: present
+    regexp: "^PasswordAuthentication"
+    line: "PasswordAuthentication no"
+
+- name: Disable PermitEmptyPasswords
+  lineinfile:
+    path: /etc/ssh/sshd_config
+    state: present
+    regexp: "^PermitEmptyPasswords"
+    line: "PermitEmptyPasswords no"
