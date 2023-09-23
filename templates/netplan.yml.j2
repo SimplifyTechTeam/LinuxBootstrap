@@ -1,0 +1,2 @@
+{% set _dummy = netplan_conf.network.ethernets.ens160.nameservers.update({'addresses': _addresses}) %}
+{{ netplan_conf|to_nice_yaml }}

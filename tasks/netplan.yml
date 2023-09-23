@@ -1,0 +1,6 @@
+    - template:
+        src: netplan.yml.j2
+        dest: 00-installer-config-test.yaml
+      vars:
+        _addresses: "{{ netplan_conf.network.ethernets.enp3s0.nameservers.addresses|
+                        regex_replace('192.168.86.14', '192.168.86.16') }}"
