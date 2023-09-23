@@ -6,8 +6,11 @@
     - name: update repositories
       apt:
         update_cache: yes
-      changed_when: False
+      changed_when: False 
 
+  var_files:
+    - include: vars/users.yml
+  
   tasks:
     - include: tasks/apt.yml
     - include: tasks/firewall.yml
@@ -16,3 +19,4 @@
     - include: tasks/users.yml
     - include: tasks/authorisedkeys.yml
     #- include: tasks/cron.yml
+  
