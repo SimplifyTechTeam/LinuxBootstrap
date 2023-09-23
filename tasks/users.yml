@@ -3,4 +3,6 @@
     name: "{{ item.login }}"
     shell: /bin/bash
     groups: sit-admins
+    create_home: true
+    expires: -1
   loop: "{{ users }}"

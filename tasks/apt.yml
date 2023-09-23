@@ -9,7 +9,7 @@
     name: unattended-upgrades
     update_cache: yes
 
-- name: Enable periodic updates
+- name: Enable periodic updates # auto reboots disabled by default
   copy:
     src: 10periodic
     dest: /etc/apt/apt.conf.d/10periodic

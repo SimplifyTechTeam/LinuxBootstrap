@@ -1,9 +1,12 @@
 ## default is commented below
-#APT::Periodic::Update-Package-Lists "1";
-#APT::Periodic::Download-Upgradeable-Packages "0";
-#APT::Periodic::AutocleanInterval "0";
+## set Unattended-Upgrade to 1 to enable automatic upgrades
+## by default automatic reboots are disabled, editable within /etc/apt/apt.conf.d/50unattended-upgrades
+#APT::Periodic::Update-Package-Lists "1";                   # how often in days package lists are refreshed
+#APT::Periodic::Unattended-Upgrade "0";                     # set to 1 to enable unattended upgrades 
+#APT::Periodic::Download-Upgradeable-Packages "0";          # frequency in days for the downloading of packages
+#APT::Periodic::AutocleanInterval "0";                      # how often obsolete packages are removed from apt cache
 
 APT::Periodic::Update-Package-Lists "1";
+APT::Periodic::Unattended-Upgrade "1";
 APT::Periodic::Download-Upgradeable-Packages "1";
 APT::Periodic::AutocleanInterval "7";
-APT::Periodic::Unattended-Upgrade "1";

@@ -1,4 +1,0 @@
----
-## runs after tasks
-- name: set sitadmin password to never expire
-  command: passwd -e sitadmin-a

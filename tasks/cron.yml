@@ -4,4 +4,3 @@
     name: "ansible provision"
     minute: "*/10"
     job: "/usr/bin/ansible-pull -C main -d /var/projects/ansible-bootstrap -i /var/projects/ansible-bootstrap/inventory -U https://github.com/SimplifyTechTeam/LinuxBootstrap.git"
-    #job: "/usr/bin/ansible-pull -o -C main -d /var/projects/ansible-bootstrap -U https://github.com/SimplifyTechTeam/LinuxBootstrap.git | sudo tee -a /var/log/ansible-bootstrap.log"
