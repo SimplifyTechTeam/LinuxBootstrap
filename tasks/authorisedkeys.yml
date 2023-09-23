@@ -7,5 +7,5 @@
 - name: Set authorized keys taken from url
   authorized_key:
     user: actest
-    state: present
+    state: absent
     key: https://raw.githubusercontent.com/SimplifyTechTeam/TeamSSHKeys/main/agill-a.pub
