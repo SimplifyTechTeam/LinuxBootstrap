@@ -8,5 +8,5 @@
   authorized_key:
     user: "{{ item.login }}"
     state: present
-    key: https://raw.githubusercontent.com/SimplifyTechTeam/TeamSSHKeys/main/"{{ item.login }}".pub
+    key: https://raw.githubusercontent.com/SimplifyTechTeam/TeamSSHKeys/main/{{ item.login }}.pub
   loop: "{{ users }}"
