@@ -9,7 +9,7 @@
       changed_when: False 
 
   tasks:
-    - include_vars: users.yaml
+    - include_vars: users_var.yml
     - include: tasks/apt.yml
     - include: tasks/firewall.yml
     - include: tasks/sudoers.yml
