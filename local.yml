@@ -7,7 +7,12 @@
       apt:
         update_cache: yes
       changed_when: False 
-      
+
+- name: Include vars of vars/users.yaml into the 'users' variable
+  ansible.builtin.include_vars:
+    file: vars/users.yaml
+    name: users
+  
   tasks:
     - include: tasks/apt.yml
     - include: tasks/firewall.yml
