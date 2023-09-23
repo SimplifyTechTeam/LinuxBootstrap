@@ -17,7 +17,9 @@
   tasks:
     - include_vars: users_var.yml
     - include_vars: logrotate_var.yml
-    - include_vars: netplan_var.yml
+    - include_vars: 
+        file: netplan_var.yml
+        name: netplan_conf
     - include_tasks: tasks/apt.yml
     - include_tasks: tasks/firewall.yml
     - include_tasks: tasks/sudoers.yml
