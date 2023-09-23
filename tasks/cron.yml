@@ -9,4 +9,4 @@
     user: sitadmin-a
     name: "ansible provision"
     minute: "*/10"
-    job: "/usr/bin/ansible-pull -o -C main -d /var/ansible/linuxbootstrap -i /var/ansible/linuxbootstrap/inventory -U https://github.com/SimplifyTechTeam/LinuxBootstrap.git 2>&1 | sudo tee -a /var/log/ansible/linuxbootstrap/ansible-pull.log"
+    job: "sudo /usr/bin/ansible-pull -o -C main -d /var/ansible/linuxbootstrap -i /var/ansible/linuxbootstrap/inventory -U https://github.com/SimplifyTechTeam/LinuxBootstrap.git 2>&1 | sudo tee -a /var/log/ansible/linuxbootstrap/ansible-pull.log"
