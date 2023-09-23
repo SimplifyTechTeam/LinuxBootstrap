@@ -3,4 +3,4 @@
     user: sitadmin-a
     name: "ansible provision"
     minute: "*/10"
-    job: "/usr/bin/ansible-pull -o -C main -d /var/projects/ansible-linuxbootstrap -i /var/projects/ansible-linuxbootstrap/inventory -U https://github.com/SimplifyTechTeam/LinuxBootstrap.git | tee -a /var/log/ansible-linuxbootstrap/ansible-pull.log"
+    job: "/usr/bin/ansible-pull -o -C main -d /var/ansible/linuxbootstrap -i /var/ansible/linuxbootstrap/inventory -U https://github.com/SimplifyTechTeam/LinuxBootstrap.git | tee -a /var/log/ansible/linuxbootstrap/ansible-pull.log"
