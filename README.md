@@ -1,16 +1,14 @@
-# Bootstrapping Linux using Ansible pull
+## Bootstrapping Linux using Ansible pull
+## Will setup cron job on 10 min schedule for future runs
 
-# Install Ansible
+# Setup ansible on node that will pull from git
 sudo apt update -y
 sudo apt install software-properties-common -y
 sudo add-apt-repository --yes --update ppa:ansible/ansible
 sudo apt install ansible -y
 
-## Only run if git changes
-sudo ansible-pull -o -C ${checkout} -d ${directory} -i ${directory}/inventory -U ${url} 2>&1 | sudo tee -a ${logfile}
+# Only run if git changes, pull playbook from main branch
+ansible-pull -o -C main -d /var/ansible/linuxbootstrap -i /var/ansible/linuxbootstrap/inventory -U https://github.com/SimplifyTechTeam/LinuxBootstrap.git | tee -a /var/log/ansible/linuxbootstrap/ansible-pull.log
 
-## run anyway
-sudo ansible-pull -C ${checkout} -d ${directory} -i ${directory}/inventory -U ${url} 2>&1 | sudo tee -a ${logfile}
-
-
-https://github.com/harrounmoussa/ansible-pull/blob/master/ansible_pull.yml
+# run regardless of changes, pull playbook from main branch
+ansible-pull -C main -d /var/ansible/linuxbootstrap -i /var/ansible/linuxbootstrap/inventory -U https://github.com/SimplifyTechTeam/LinuxBootstrap.git | tee -a /var/log/ansible/linuxbootstrap/ansible-pull.log
