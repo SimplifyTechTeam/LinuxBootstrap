@@ -1,0 +1,4 @@
+- name: Ensure group "sit-admins" exists
+  ansible.builtin.group:
+    name: sit-admins
+    state: present

@@ -1,0 +1,14 @@
+#- name: Add sitadmin-a to sudoers
+#  lineinfile:
+#    path: /etc/sudoers
+#    state: present
+#    regexp: "^%sitadmin-a"
+#    line: "%sitadmin-a ALL=(ALL) ALL"
+#    validate: "/usr/sbin/visudo -cf %s"
+
+- name: Allow sit-admins group to run commands
+  community.general.sudoers:
+    name: sit-admins
+    state: present
+    group: sit-admins
+    commands: ALL
