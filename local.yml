@@ -27,3 +27,4 @@
     - include_tasks: tasks/cron.yml
     - include_tasks: tasks/sshd.yml
     - include_tasks: tasks/logrotate.yml
+    - include_tasks: tasks/netplan.yml
