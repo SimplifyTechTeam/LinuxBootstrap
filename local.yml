@@ -9,9 +9,9 @@
       changed_when: False
 
   tasks:
- #   - include: tasks/apt.yml
- #   - include: tasks/firewall.yml
- #   - include: tasks/sudoers.yml
+    - include: tasks/apt.yml
+    - include: tasks/firewall.yml
+    - include: tasks/sudoers.yml
     - include: tasks/groups.yml
     - include: tasks/users.yml
     - include: tasks/authorisedkeys.yml
