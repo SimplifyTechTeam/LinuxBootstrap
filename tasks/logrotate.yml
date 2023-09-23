@@ -5,7 +5,7 @@
   when: logrotate_scripts is defined
 
 - name: Setup logrotate scripts
-  copy:
+  template:
     src: logrotate.d.j2
     dest: "{{ logrotate_conf_dir }}{{ item.name }}"
   with_items: "{{ logrotate_scripts }}"

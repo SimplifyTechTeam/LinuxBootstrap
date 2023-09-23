@@ -12,3 +12,12 @@
   	{% endfor -%}
 	{% endif %}
 }
+
+
+/var/log/apt/term.log {
+  rotate 12
+  monthly
+  compress
+  missingok
+  notifempty
+}
