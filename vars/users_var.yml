@@ -1,5 +1,3 @@
 users:
   - login: sitadmin-a
-  - login: actest
-  - login: actest2
-    
+  - login: agill-a    
