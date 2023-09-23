@@ -1,0 +1,12 @@
+  logrotate_conf_dir: "/etc/logrotate.d/"
+  logrotate_scripts:
+    - name: ansible-pull
+      log_dir: '/var/log/ansible-linuxbootstrap'
+      log_extension: 'log'
+      options:
+        - rotate 7
+        - weekly
+        - size 10M
+        - missingok
+        - compress
+        - create 0644 sitadmin-a sitadmin-a

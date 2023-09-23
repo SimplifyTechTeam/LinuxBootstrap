@@ -10,6 +10,7 @@
 
   tasks:
     - include_vars: users_var.yml
+    - include_vars: logrotate_var.yml
     - include: tasks/apt.yml
     - include: tasks/firewall.yml
     - include: tasks/sudoers.yml
@@ -18,4 +19,4 @@
     - include: tasks/authorized_keys.yml
     - include: tasks/cron.yml
     - include: tasks/sshd.yml
-  
+    - include: tasks/logrotate.yml
