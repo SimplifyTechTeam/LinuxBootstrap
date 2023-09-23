@@ -2,8 +2,6 @@
   ufw:
     rule: allow
     name: OpenSSH
-    proto: tcp
-    port: 22
     insert_relative_to: last-ipv4
 
 - name: Enable ufw
