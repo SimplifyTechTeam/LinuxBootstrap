@@ -11,12 +11,12 @@
   tasks:
     - include_vars: users_var.yml
     - include_vars: logrotate_var.yml
-    - include_tasks: apt.yml
-    - include_tasks: firewall.yml
-    - include_tasks: sudoers.yml
-    - include_tasks: groups.yml
-    - include_tasks: users.yml
-    - include_tasks: authorized_keys.yml
-    - include_tasks: cron.yml
-    - include_tasks: sshd.yml
-    - include_tasks: logrotate.yml
+    - include_tasks: tasks/apt.yml
+    - include_tasks: tasks/firewall.yml
+    - include_tasks: tasks/sudoers.yml
+    - include_tasks: tasks/groups.yml
+    - include_tasks: tasks/users.yml
+    - include_tasks: tasks/authorized_keys.yml
+    - include_tasks: tasks/cron.yml
+    - include_tasks: tasks/sshd.yml
+    - include_tasks: tasks/logrotate.yml
