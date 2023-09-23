@@ -1,3 +1,9 @@
+- name: Create log directory
+  ansible.builtin.file:
+    path: /var/log/ansible/linuxbootstrap
+    state: directory
+    mode: '0755'
+
 - name: install ansible pull cron
   cron:
     user: sitadmin-a
