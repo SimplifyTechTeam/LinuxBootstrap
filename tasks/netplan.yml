@@ -4,5 +4,3 @@
       vars:
         _addresses: "{{ netplan_conf.network.ethernets.ens160.nameservers.addresses|
                         regex_replace('192.168.86.14', '192.168.86.16') }}"
-        _search:    "{{ netplan_conf.network.ethernets.ens160.nameservers.search|
-                        regex_replace('simplifyit.co.uk') }}"

@@ -1,3 +1,2 @@
 {% set _nameservers = netplan_conf.network.ethernets.ens160.nameservers.update({'addresses': _addresses}) %}
-{% set _search = netplan_conf.network.ethernets.ens160.search.update({'search': _search}) %}
 {{ netplan_conf|to_nice_yaml }}
