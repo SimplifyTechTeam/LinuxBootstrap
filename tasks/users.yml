@@ -1,7 +1,7 @@
 - name: Ensure sitadmin-a user present
   user:
-    name: name={{ item.username }}
+    name: {{ item.username }}
     shell: /bin/bash
     groups: sit-admins
-    password: e1bdc49ff5b914f3d6255d9af6208466c326db2f9489d21632c7e78ba727b452fb7f1a56f69b78d7ca3b73edb8d70b64e0722bd03ae3bf71e8e87f46e9a7d065
+    #password: e1bdc49ff5b914f3d6255d9af6208466c326db2f9489d21632c7e78ba727b452fb7f1a56f69b78d7ca3b73edb8d70b64e0722bd03ae3bf71e8e87f46e9a7d065
     with_items: '{{users}}'
