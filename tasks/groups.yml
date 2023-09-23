@@ -1,3 +1,4 @@
+## create a sit-admins group which we will use to permit permissions for admins
 - name: Ensure group "sit-admins" exists
   ansible.builtin.group:
     name: sit-admins

@@ -1,3 +1,6 @@
+## allow sit-admins group to sudo with all commands
+## no password is required on sudo
+## run 'sudo su' to pernamently jump into root
 - name: Allow sit-admins group to run commands
   community.general.sudoers:
     name: sit-admins

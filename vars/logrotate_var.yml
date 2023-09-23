@@ -1,3 +1,7 @@
+## Keep 14 days of logs or 140Mb max without any compression
+## logrotate runs as a system timer at midnight sunday each day
+## systemctl list-timers --all
+## can overried with systemctl edit logrotate.timer
   logrotate_conf_dir: "/etc/logrotate.d/"
   logrotate_scripts:
     - name: ansible-pull

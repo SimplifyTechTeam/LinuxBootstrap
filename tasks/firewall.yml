@@ -1,9 +1,11 @@
+## create firewall rule for ssh ingress
+## run 'sudo ufw version' to see created rule
 - name: Enable ufw access for OpenSSH
   ufw:
     rule: allow
     name: OpenSSH
-    insert_relative_to: last-ipv4
 
+## turn on firewall
 - name: Enable ufw
   ufw:
     state: enabled

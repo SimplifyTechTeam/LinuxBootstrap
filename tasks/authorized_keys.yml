@@ -1,3 +1,7 @@
+## grabs keys from an external repo just for technical user keys 
+## automatically installs them into the ~/.ssh/authorized_keys file
+## at which point users can login as long as they bind their private key counterpart to the ssh connection
+## simply connect with username-a@ipaddress and it will automatically connect
 - name: Set authorized keys taken from url
   authorized_key:
     user: "{{ item.login }}"

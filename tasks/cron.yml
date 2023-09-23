@@ -1,9 +1,14 @@
+## create log directory for tee
 - name: Create log directory
   ansible.builtin.file:
     path: /var/log/ansible/linuxbootstrap
     state: directory
     mode: '0755'
 
+## automate ansible pull on a 10 minute schedule
+## the pull will skip if the repo has no additional commits
+## logs automatically rotate using logrotate inside /var/log/ansible/linuxbootstrap
+## to see cron job run 'sudo crontab -u sitadmin-a -l'
 - name: install ansible pull cron
   cron:
     user: sitadmin-a

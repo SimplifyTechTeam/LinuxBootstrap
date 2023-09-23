@@ -1,15 +1,13 @@
-- name: Update and upgrade apt packages
-  apt:
-    upgrade: yes
-    update_cache: yes
-    cache_valid_time: 86400 # every 24 hrs
-
+## install unattended upgrade package 
+## by default this will not automatically reboot
 - name: Install unattended-upgrades package
   apt:
     name: unattended-upgrades
     update_cache: yes
 
-- name: Enable periodic updates # auto reboots disabled by default
+## enable periodic updates by coping the file from this repo to the machine in the specified path
+## auto reboots disabled by default
+- name: Enable periodic updates 
   copy:
     src: 10periodic
     dest: /etc/apt/apt.conf.d/10periodic

@@ -1,3 +1,5 @@
+## creates users by looping through the users variable file
+## automatically creates home directory, no password expiry, bash on login and puts them in sit-admins group
 - name: Add users
   user:
     name: "{{ item.login }}"

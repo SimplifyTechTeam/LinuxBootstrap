@@ -1,13 +1,19 @@
+## hosts set to localhost for ansible-pull
+## usually ansible works by pushing from the server to the client
 - hosts: localhost  
   connection: local
   become: true
 
+## run these tasks before others
+## gets apt cache in order
   pre_tasks:
     - name: update repositories
       apt:
         update_cache: yes
       changed_when: False 
 
+## complete these tasks as part of the playbook
+## use variables where required
   tasks:
     - include_vars: users_var.yml
     - include_vars: logrotate_var.yml

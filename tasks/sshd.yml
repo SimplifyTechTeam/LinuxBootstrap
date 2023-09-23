@@ -1,3 +1,5 @@
+## stop anyone remotely logging on as root
+## can still login via local console
 - name: Disable PermitRootLogin
   lineinfile:
     path: /etc/ssh/sshd_config
@@ -5,6 +7,7 @@
     regexp: "^PermitRootLogin"
     line: "PermitRootLogin prohibit-password"
 
+## disable password auth and force the use of ssh keys
 - name: Disable PasswordAuthentication
   lineinfile:
     path: /etc/ssh/sshd_config
@@ -12,6 +15,7 @@
     regexp: "^PasswordAuthentication"
     line: "PasswordAuthentication no"
 
+## disable the use of empty passwords for ssh sessions
 - name: Disable PermitEmptyPasswords
   lineinfile:
     path: /etc/ssh/sshd_config

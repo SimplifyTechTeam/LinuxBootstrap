@@ -1,9 +1,13 @@
+## install log rotate for ansible logs so they dont fill disk
+## only install if the script file is present
 - name: Install logrotate
   package: 
     name: logrotate
     state: present
   when: logrotate_scripts is defined
 
+## uses a template file inside the templates directory to automatically setup '/etc/logrotate.d/ansible-pull' with a config file
+## the template uses variables throughout and is built from the combination of the template file and the vars file
 - name: Setup logrotate scripts
   template:
     src: logrotate.d.j2
