@@ -1,0 +1,10 @@
+## Set timezone
+- name: set timezone
+  shell: timedatectl set-timezone Europe/London
+
+## add ntp servers to systemd timesyncd
+## check with 'cat /etc/systemd/timesyncd.conf' and 'timedatectl timesync-status'
+- name: Config timesyncd
+  template:
+    dest: /etc/systemd/timesyncd.conf
+    src: timesyncd.conf.j2
