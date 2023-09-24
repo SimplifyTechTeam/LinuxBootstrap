@@ -8,7 +8,7 @@
 - name: Enable ufw access for ICMP
   ufw:
     rule: allow
-    proto: icmp
+    name: ping
 
 ## turn on firewall
 - name: Enable ufw
