@@ -5,11 +5,6 @@
     rule: allow
     name: OpenSSH
 
-- name: Enable ufw access for ICMP
-  ufw:
-    rule: allow
-    name: ping
-
 ## turn on firewall
 - name: Enable ufw
   ufw:
