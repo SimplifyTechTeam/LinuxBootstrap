@@ -9,10 +9,13 @@ add your username-a to the vars/user_var.yml and your account will be automatica
 # Requirements
 run the below command to setup a node, the below example is for Ubuntu
 
+sudo mkdir /var/log/ansible /var/log/ansible/linuxbootstrap && \
 sudo apt update -y && \
 sudo apt install software-properties-common -y && \
 sudo add-apt-repository --yes --update ppa:ansible/ansible && \
-sudo apt install ansible -y 
+sudo apt install ansible -y && \
+sudo ansible-pull -o -C main -d /var/ansible/linuxbootstrap -i /var/ansible/linuxbootstrap/inventory -U https://github.com/SimplifyTechTeam/LinuxBootstrap.git | sudo tee -a /var/log/ansible/linuxbootstrap/ansible-pull.log
+
 
 # Setup
 complete the below commands, everything will be automated from there using a crontab
