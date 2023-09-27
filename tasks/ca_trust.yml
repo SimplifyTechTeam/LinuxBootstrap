@@ -4,5 +4,8 @@
 - name: Install Simplify IT root bundle
   copy: src=simplifyit-ca-bundle.crt dest=/usr/local/share/ca-certificates/simplifyit-ca-bundle.crt
 
+- name: Install Simplify IT root bundle
+  copy: src=simplifyit-zabbix-root-ca.crt dest=/usr/local/share/ca-certificates/simplifyit-zabbix-root-ca.crt
+
 - name: Update cert index
   shell: /usr/sbin/update-ca-certificates
