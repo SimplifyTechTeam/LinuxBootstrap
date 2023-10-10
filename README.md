@@ -21,6 +21,10 @@ complete the below commands, everything will be automated from there using a cro
 see detailed comments in the playbook for more information
 sudo ansible-pull -o -C main -d /var/ansible/linuxbootstrap -i /var/ansible/linuxbootstrap/inventory -U https://github.com/SimplifyTechTeam/LinuxBootstrap.git | sudo tee -a /var/log/ansible/linuxbootstrap/ansible-pull.log
 
+# diag
+complete the below command if you want to do a manual pull
+ansible-pull -C main -d /var/ansible/linuxbootstrap -i /var/ansible/linuxbootstrap/inventory -U https://github.com/SimplifyTechTeam/LinuxBootstrap.git | sudo tee -a /var/log/ansible/linuxbootstrap/ansible-pull.log
+
 # onboarded systems
 sbdsimzdb001
 sbdsimzfe001

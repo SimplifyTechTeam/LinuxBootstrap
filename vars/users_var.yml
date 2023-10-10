@@ -1,6 +1,7 @@
 ## variable for user creation and ssh public key pull
 ## to add a user add a new line and also upload the "username-a.pub" file to the below repo
 ## https://github.com/SimplifyTechTeam/TeamSSHKeys
+## do not commit this change before committing the new keys in the above repo else the user will be created without an authorised key
 users:
   - login: sitadmin-a
   - login: agill-a
