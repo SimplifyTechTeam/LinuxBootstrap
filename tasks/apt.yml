@@ -9,8 +9,8 @@
 ## auto reboots disabled by default
 - name: Enable periodic updates 
   copy:
-    src: 10periodic
-    dest: /etc/apt/apt.conf.d/10periodic
+    src: 21periodic-auto-upgrades_on
+    dest: /etc/apt/apt.conf.d/21periodic-auto-upgrades_on
     owner: root
     group: root
     mode: 0644
