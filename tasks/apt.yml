@@ -14,3 +14,9 @@
     owner: root
     group: root
     mode: 0644
+
+## install basic tools package 
+- name: Install unattended-upgrades package
+  apt:
+    name: net-tools
+    update_cache: yes
