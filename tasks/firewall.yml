@@ -1,3 +1,13 @@
+## gather installed packages as facts
+- name: Gather the package facts
+  ansible.builtin.package_facts:
+    manager: auto
+
+## print installed packages
+- name: Print the package facts
+  ansible.builtin.debug:
+    var: ansible_facts.packages
+
 ## create firewall rule for ssh ingress
 ## run 'sudo ufw version' to see created rule
 - name: Enable ufw access for OpenSSH
