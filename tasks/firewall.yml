@@ -4,8 +4,10 @@
   ufw:
     rule: allow
     name: OpenSSH
+  when: "'ufw' in ansible_facts.packages"
 
 ## turn on firewall
 - name: Enable ufw
   ufw:
     state: enabled
+  when: "'ufw' in ansible_facts.packages"  
