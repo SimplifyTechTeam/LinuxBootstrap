@@ -30,3 +30,6 @@ sbdsimzdb001
 sbdsimzfe001
 sbdsimzpr001
 alcsimipam01
+sdbwgvpn01
+sdbsimfems001
+sdbsimftps001
